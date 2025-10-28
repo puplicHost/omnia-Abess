@@ -8,40 +8,40 @@
   * { box-sizing: border-box; margin:0; padding:0; font-family:"Cairo", sans-serif; }
   body { background:#fff; color:#333; display:flex; flex-direction:column; min-height:100vh; }
   main { flex:1; }
-  header { display:flex; justify-content:space-between; align-items:center; padding:30px 10%; background:#fff; border-bottom:3px solid #691182; flex-wrap:wrap; }
+  header { display:flex; justify-content:space-between; align-items:center; padding:30px 10%; background:#fff; border-bottom:3px solid #522f95; flex-wrap:wrap; }
   .profile { display:flex; align-items:center; gap:20px; flex:1; }
-  .profile img { width:120px; height:120px; border-radius:50%; object-fit:cover; border:4px solid #691182; }
+  .profile img { width:120px; height:120px; border-radius:50%; object-fit:cover; border:4px solid #522f95; }
   .profile-info { text-align:left; }
-  .profile-info h1 { font-size:24px; margin-bottom:5px; color:#691182; font-weight:700; }
+  .profile-info h1 { font-size:24px; margin-bottom:5px; color:#522f95; font-weight:700; }
   .profile-info p { color:#444; font-size:16px; margin-bottom:8px; }
   .social-links { display:flex; gap:15px; margin-top:5px; }
-  .social-links a { color:#691182; font-size:20px; text-decoration:none; transition:0.3s; }
+  .social-links a { color:#522f95; font-size:20px; text-decoration:none; transition:0.3s; }
   .social-links a:hover { color:#4b0c5c; }
   .about { flex:1; font-size:16px; line-height:1.8; color:#444; text-align:right; margin-top:20px; }
 
-  nav { display:flex; justify-content:center; flex-wrap:wrap; background:#691182; padding:15px; position:sticky; top:0; z-index:100; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+  nav { display:flex; justify-content:center; flex-wrap:wrap; background:#522f95; padding:15px; position:sticky; top:0; z-index:100; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
   nav button { background:none; border:none; font-size:18px; margin:5px 15px; cursor:pointer; color:#fff; padding:10px 20px; border-radius:8px; transition:0.3s; }
   nav button:hover { background:#8a35b1; }
-  nav button.active { background:#fff; color:#691182; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+  nav button.active { background:#fff; color:#522f95; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
 
-  .section { display:none; padding:40px 10%; background:#fff; margin:30px auto; border-radius:12px; max-width:1000px; box-shadow:0 2px 10px rgba(0,0,0,0.05); border-right:5px solid #691182; animation:fadeIn 0.5s ease; }
+  .section { display:none; padding:40px 10%; background:#fff; margin:30px auto; border-radius:12px; max-width:1000px; box-shadow:0 2px 10px rgba(0,0,0,0.05); border-right:5px solid #522f95; animation:fadeIn 0.5s ease; }
   .section.active { display:flex; flex-direction:column; gap:30px; }
   .section-content { width:100%; text-align:right; }
 
-  .section h2 { color:#691182; margin-bottom:15px; font-size:22px; }
+  .section h2 { color:#522f95; margin-bottom:15px; font-size:22px; }
   .section p, .section ul { font-size:16px; line-height:1.8; color:#444; }
   .section ul { padding-right:20px; list-style-type:square; }
 
   @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
 
-  footer { background:#691182; color:#fff; text-align:center; padding:20px 10px; margin-top:auto; }
+  footer { background:#522f95; color:#fff; text-align:center; padding:20px 10px; margin-top:auto; }
   footer a { color:#fff; text-decoration:underline; }
 
   /* المهارات */
   .skill { margin-bottom:20px; }
   .skill-name { font-weight:bold; margin-bottom:5px; font-size:16px; }
   .skill-bar { background:#e0e0e0; border-radius:20px; overflow:hidden; height:20px; }
-  .skill-level { height:100%; border-radius:20px; background:#691182; color:#fff; text-align:right; padding-right:10px; line-height:20px; font-weight:bold; animation:fillSkill 2s ease forwards; }
+  .skill-level { height:100%; border-radius:20px; background:#522f95; color:#fff; text-align:right; padding-right:10px; line-height:20px; font-weight:bold; animation:fillSkill 2s ease forwards; }
   @keyframes fillSkill { from{width:0;} }
 
   /* معرض الأعمال */
@@ -50,14 +50,14 @@
   .portfolio-item:hover { transform:translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.1); }
   .portfolio-item img { width:100%; height:180px; object-fit:cover; }
   .portfolio-item p { margin:10px 0; color:#333; }
-  .portfolio-item .btn { display:inline-block; padding:8px 16px; background-color:#691182; color:#fff; border-radius:8px; font-weight:bold; transition:background-color 0.3s; }
+  .portfolio-item .btn { display:inline-block; padding:8px 16px; background-color:#522f95; color:#fff; border-radius:8px; font-weight:bold; transition:background-color 0.3s; }
   .portfolio-item .btn:hover { background-color:#4b0c5c; }
 
   /* تايم لاين الخبرات */
-  .timeline { position:relative; margin:30px 0; padding-left:20px; border-left:3px solid #691182; }
+  .timeline { position:relative; margin:30px 0; padding-left:20px; border-left:3px solid #522f95; }
   .timeline-item { position:relative; margin-bottom:30px; padding-left:20px; }
-  .timeline-item::before { content:""; position:absolute; left:-10px; top:0; width:20px; height:20px; background:#691182; border-radius:50%; border:3px solid #fff; }
-  .timeline-date { font-weight:bold; color:#691182; margin-bottom:5px; }
+  .timeline-item::before { content:""; position:absolute; left:-10px; top:0; width:20px; height:20px; background:#522f95; border-radius:50%; border:3px solid #fff; }
+  .timeline-date { font-weight:bold; color:#522f95; margin-bottom:5px; }
 
   /* الاستجابة */
   @media(max-width:768px){
@@ -120,7 +120,7 @@
   .btn {
     display: inline-block;
     padding: 10px 18px;
-    background: #691182;
+    background: #522f95;
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
@@ -128,7 +128,7 @@
   }
 
   .btn:hover {
-    background: #691182;
+    background: #522f95;
   }
 </style>
 </head>
@@ -215,7 +215,7 @@
       <h2>التعليم والشهادات</h2>
       <p><strong>الدرجة العلمية:</strong> خريجة كلية التربية النوعية – قسم تكنولوجيا التعليم (دفعة 2019)</p>
       <p><strong>التقدير:</strong> امتياز مع مرتبة الشرف</p>
-      <h3 style="color:#691182;">الدورات التدريبية والشهادات</h3>
+      <h3 style="color:#522f95;">الدورات التدريبية والشهادات</h3>
       <ul>
         <li>عضو لجنة التسويق بفريق Enactus – جامعة الفيوم لمدة عامين.</li>
         <li>التعلم الذاتي عبر إدراك، رواق، ويوتيوب.</li>
@@ -228,13 +228,13 @@
   <!-- المهارات واللغات -->
   <section id="skills" class="section" style="padding:60px 10%; background:#faf8fb;">
     <div class="section-content">
-      <h2 style="color:#691182; text-align:center; font-size:28px; margin-bottom:40px; position:relative;">
+      <h2 style="color:#522f95; text-align:center; font-size:28px; margin-bottom:40px; position:relative;">
         المهارات واللغات
         <span style="
           display:block;
           width:80px;
           height:3px;
-          background:#691182;
+          background:#522f95;
           margin:10px auto 0;
           border-radius:3px;">
         </span>
@@ -242,7 +242,7 @@
   
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; max-width:900px; margin:auto;">
         <div style="background:#fff; border:1px solid #e3d6ec; border-radius:12px; padding:20px; box-shadow:0 3px 6px rgba(0,0,0,0.05);">
-          <h3 style="color:#691182; font-size:20px; margin-bottom:10px;">المهارات الأساسية</h3>
+          <h3 style="color:#522f95; font-size:20px; margin-bottom:10px;">المهارات الأساسية</h3>
           <ul style="list-style:none; padding:0; line-height:1.8; color:#444;">
             <li>✦ كتابة المحتوى بأنواعه (سوشيال ميديا، تسويقي، تعليمي، براندينج)</li>
             <li>✦ ابتكار الأفكار وصياغة موضوعات جديدة</li>
@@ -253,7 +253,7 @@
         </div>
   
         <div style="background:#fff; border:1px solid #e3d6ec; border-radius:12px; padding:20px; box-shadow:0 3px 6px rgba(0,0,0,0.05);">
-          <h3 style="color:#691182; font-size:20px; margin-bottom:10px;">المهارات الشخصية</h3>
+          <h3 style="color:#522f95; font-size:20px; margin-bottom:10px;">المهارات الشخصية</h3>
           <ul style="list-style:none; padding:0; line-height:1.8; color:#444;">
             <li>✦ العمل الجماعي والتواصل</li>
             <li>✦ العمل تحت ضغط</li>
@@ -263,12 +263,12 @@
         </div>
   
         <div style="background:#fff; border:1px solid #e3d6ec; border-radius:12px; padding:20px; box-shadow:0 3px 6px rgba(0,0,0,0.05);">
-          <h3 style="color:#691182; font-size:20px; margin-bottom:10px;">الأدوات</h3>
+          <h3 style="color:#522f95; font-size:20px; margin-bottom:10px;">الأدوات</h3>
           <p style="color:#444; line-height:1.8;">
             Canva – Google Docs – Google Sheets – Google Slides – Microsoft Word – PowerPoint – ChatGPT
           </p>
   
-          <h3 style="color:#691182; font-size:20px; margin-top:20px; margin-bottom:10px;">اللغات</h3>
+          <h3 style="color:#522f95; font-size:20px; margin-top:20px; margin-bottom:10px;">اللغات</h3>
           <p style="color:#444;">العربية:جيد جدًا | الإنجليزية: جيد</p>
         </div>
       </div>
