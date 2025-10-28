@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>أمنية عباس | كاتبة ومشرفة محتوى</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Cairo", sans-serif;
+  }
+
+  body {
+    background: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background: #fff;
+    border-bottom: 3px solid #691182;
+    gap: 20px;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+  }
+
+  .profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #691182;
+  }
+
+  .profile-info h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #691182;
+    font-weight: 700;
+  }
+
+  .profile-info p {
+    color: #444;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+  }
+
+  .social-links a {
+    color: #691182;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .social-links a:hover {
+    color: #4b0c5c;
+  }
+
+  .about {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    text-align: right;
+  }
+
+  main {
+    flex: 1;
+    padding: 40px 10%;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  h2.section-title {
+    color: #691182;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+  h2.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 80px;
+    height: 3px;
+    background-color: #691182;
+    border-radius: 3px;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f8f8f8;
+    padding: 5px;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+
+  /* 🔹 نافذة الصورة المنبثقة */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  }
+
+  .close {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .close:hover {
+    color: #aaa;
+  }
+
+  footer {
+    background: #691182;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: auto;
+  }
+
+  footer a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* 🔹 الموبايل */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .profile {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+    .portfolio-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-top:20px; }
+  .portfolio-item { background:#fff; border-radius:12px; overflow:hidden; border:1px solid #ddd; text-align:center; padding-bottom:15px; transition:transform 0.3s, box-shadow 0.3s; }
+  .portfolio-item:hover { transform:translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.1); }
+  .portfolio-item img { width:100%; height:180px; object-fit:cover; }
+  .portfolio-item p { margin:10px 0; color:#333; }
+  .portfolio-item .btn { display:inline-block; padding:8px 16px; background-color:#691182; color:#fff; border-radius:8px; font-weight:bold; transition:background-color 0.3s; }
+  .portfolio-item .btn:hover { background-color:#4b0c5c; }
+ 
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="profile">
+    <img src="logo.jpeg" alt="صورة أمنية عباس" />
+    <div class="profile-info">
+      <h1>أمنية عباس</h1>
+      <p>كاتبة ومشرفة محتوى</p>
+    
+    </div>
+  </div>
+
+  <div class="about">
+    <p>
+      كاتبة ومشرفة محتوى بخبرة تتجاوز 5 سنوات في إدارة المجتمعات الرقمية وكتابة المحتوى في قطاعات متعددة تشمل التعليم، الأزياء، والتسويق.
+      أسعى دائمًا للتطوير الذاتي من خلال التعلم المستمر وتقديم محتوى احترافي يعبر عن هوية العلامة التجارية.
+    </p>
+  </div>
+</header>
+
+<main>
+<section id="portfolio" class="section">
+
+     <div class="section-content">
+   <div class="portfolio-container">
+        <div class="portfolio-item">
+          <img src="book Store.jpeg" alt="">
+        <p>هنا بنعرض حملة غير رسمية كانت مطلوبة مني في كورس عن محل لبيع الكتب اونلاين والمحل عنده متابعين لكن مفيش تفاعل فكنا قدام مشكلة بنفكر ازاى نحلها وهنا جاتلي فكرة الاستفزاز العاطفي او اثارة مشاعر الدفاع عند المتابع انه يرد ويتفاعل مع المحتوى اللى بيحسسه انه لو ماردش هيكون بكده قارئ صناعي يعني مزيف والانسان بطبعه ما بيحب يحس انه كذاب ودايما بيحاول يثبت العكس ولو القارئ هنا حقيقي وفعلي ومهتم هيدخل يستجيب للمحتوى لانه حابب ده.</p>
+          <a href="Task 3_20251015_021056_٠٠٠٠.pdf" class="btn">رؤية المزيد</a>
+        </div>
+        <div class="portfolio-item">
+          <img src="Swevio.jpeg" alt="">
+       <p>هنا هنستعرض جزء من اعمالي لبراند Servio
+
+Servio
+هو نظام ذكي لإدارة أعمال الصيانة
+يجمع في مكان واحد إدارة الطلبات، العقود، الفواتير، والتقارير، مع تطبيق خاص للفني والعميل.
+مخصص لشركات الصيانة العامة، التكييف والتبريد، المصاعد، المسابح، والفنادق والمجمعات العقارية.
+بكل بساطة، Servio يساعدك تدير شركتك بسهولة، تقلل الأخطاء، وتزيد كفاءة فريقك.</p>
+          <a href="Servio.html" class="btn">رؤية المزيد</a>
+        </div>
+        <div class="portfolio-item">
+          <img src="T3ahdo.jpeg" alt="">
+        <p>هنا نستعرض جزء من اعمالي الرسمية لبراند تعاهدوا 
+وهو اكاديمية تعليمية تهدف لتحفيظ القرآن اونلاين وتستهدف السوق الخليجي بوجه عام والسوق السعودي بوجه خاص.</p>
+          <a href="Ta3hdo.html" class="btn">رؤية المزيد</a>
+        </div>
+        <div class="portfolio-item">
+          <img src="norm/logo.jpg" alt="">
+<p>هنا هنعرض جزء من شغلي في كتابة محتوى تسويقي لعيادة نورمالاين المتخصصة في تقويم الأسنان بإشراف د. محمد جمال أبو عاصي.
+  شغلي ركّز على إبراز تخصص العيادة في التقويم، وزيادة الوعي عند المراهقين والشباب بأهمية العلاج المبكر، مع تقديم محتوى بيعي جذاب ولغة قريبة من الفئة المستهدفة.</p>
+          <a href="norm.html" class="btn">رؤية المزيد</a>
+        </div>
+        <div class="portfolio-item">
+          <img src="Afefa/logo.jpg" alt="">
+<p>هنا هنعرض جزء من اعمالي لبراند العفيفة 
+  و> العفيفة هو براند متخصص في تصميم أزياء محتشمة تجمع بين الفخامة والستر والراحة.</p>
+          <a href="afefa.html" class="btn">رؤية المزيد</a>
+        </div>
+        <div class="portfolio-item">
+          <img src="3kel/logo.jpeg" alt="">
+<p>
+  هنا نستعرض جزء من اعمالي في كتابة  محتوى توعوي طبي قُدّم لعيادة د. محمود عقل – استشاري الجراحة والمناظير، يهدف لرفع الوعي الصحي عند المرضى قبل وبعد الجراحة بأسلوب مبسط وواضح للجمهور.
+</p>
+          <a href="3akel.html" class="btn">رؤية المزيد</a>
+        </div>
+        
+        <div class="portfolio-item">
+          <img src="Content.webp" alt="">
+<p>نموذج من اعمالي في تنفيذ  استراتيجية غير رسمية كتدريب في كورس صناعة المحتوى مع Edge Academy</p>
+          <a href="https://docs.google.com/spreadsheets/d/1Wq_B2ASw6qdQBpiimwqCnOZjA-JB2htZ8XP-LBd1ZCY/edit?usp=drivesdk" class="btn">رؤية المزيد</a>
+        </div>
+      </div>
+
+     </div>
+</section>
+</main>
+
+<!-- ✅ نافذة الصورة المنبثقة -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="">
+</div>
+
+<footer>
+  <p>© 2025 جميع الحقوق محفوظة - <strong>أمنية عباس</strong></p>
+</footer>
+
+<script>
+  const galleryImages = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.close');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'block';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>

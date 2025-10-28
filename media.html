@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>أمنية عباس | كاتبة ومشرفة محتوى</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Cairo", sans-serif;
+  }
+
+  body {
+    background: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background: #fff;
+    border-bottom: 3px solid #691182;
+    gap: 20px;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+  }
+
+  .profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #691182;
+  }
+
+  .profile-info h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #691182;
+    font-weight: 700;
+  }
+
+  .profile-info p {
+    color: #444;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+  }
+
+  .social-links a {
+    color: #691182;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .social-links a:hover {
+    color: #4b0c5c;
+  }
+
+  .about {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    text-align: right;
+  }
+
+  main {
+    flex: 1;
+    padding: 40px 10%;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  h2.section-title {
+    color: #691182;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+  h2.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 80px;
+    height: 3px;
+    background-color: #691182;
+    border-radius: 3px;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f8f8f8;
+    padding: 5px;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+
+    .gallery video {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: #f8f8f8;
+    padding: 5px;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+  }
+
+  .gallery video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+
+  /* 🔹 نافذة الصورة المنبثقة */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  }
+
+  .close {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .close:hover {
+    color: #aaa;
+  }
+
+  footer {
+    background: #691182;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: auto;
+  }
+
+  footer a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* 🔹 الموبايل */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .profile {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="profile">
+    <img src="logo.jpeg" alt="صورة أمنية عباس" />
+    <div class="profile-info">
+      <h1>أمنية عباس</h1>
+      <p>كاتبة ومشرفة محتوى</p>
+
+    </div>
+  </div>
+
+  <div class="about">
+    <p>
+      كاتبة ومشرفة محتوى بخبرة تتجاوز 5 سنوات في إدارة المجتمعات الرقمية وكتابة المحتوى في قطاعات متعددة تشمل التعليم، الأزياء، والتسويق.
+      أسعى دائمًا للتطوير الذاتي من خلال التعلم المستمر وتقديم محتوى احترافي يعبر عن هوية العلامة التجارية.
+    </p>
+  </div>
+</header>
+
+<main>
+  <h2 class="section-title">
+    <a href="index.html">معرض الاعمال</a>
+     </h2>
+  <div class="gallery">
+<img src="posts/1.jpeg" alt="">
+<img src="posts/2.jpeg" alt="">
+<img src="posts/3.jpeg" alt="">
+<img src="posts/4.jpeg" alt="">
+<img src="posts/5.jpeg" alt="">
+<img src="posts/6.jpeg" alt="">
+<img src="posts/7.jpeg" alt="">
+<img src="posts/8.jpeg" alt="">
+
+  </div>
+<br>
+    <div class="gallery">
+
+
+  <video src="posts/10.mp4" controls></video>
+  <video src="posts/11.mp4" controls></video>
+
+  </div>
+</main>
+
+<!-- ✅ نافذة الصورة المنبثقة -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="">
+</div>
+
+<footer>
+  <p>© 2025 جميع الحقوق محفوظة - <strong>أمنية عباس</strong></p>
+</footer>
+
+<script>
+  const galleryImages = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.close');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'block';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
